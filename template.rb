@@ -38,6 +38,7 @@ gem_group :assets do
   gem 'uglifier', '>= 1.0.3'
   gem 'sprockets'
   gem 'sprockets-image_compressor'
+  gem 'favicon_maker' # Hi and low res fav-icons for asset-pipeline
 end
 
 gem_group :client_side do 

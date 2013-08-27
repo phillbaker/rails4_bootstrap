@@ -20,6 +20,7 @@ gem_group :rails_helpers do
   gem 'breadcrumbs_on_rails'
   gem 'inherited_resources' # Cleaner controllers
   gem 'rails_autolink' # View helper for sanitized html_safe strings with URLs + e-mails
+  gem 'better_serialization' # Replace Yaml serialization
 end
 
 gem_group :uploads do

@@ -3,7 +3,7 @@
 #
 
 gem_group :maintenance do
-  gem 'turnout', :git => 'git://github.com/phillbaker/turnout.git', :branch => 'fix-remove-require' #:path => '../turnout' # has a silly require 'active_record'...
+  gem 'turnout'
 end
 
 gem_group :security do

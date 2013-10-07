@@ -73,8 +73,7 @@ gem_group :test do
   gem 'vcr'
 
   # Cucumber feature tests
-  gem 'cucumber-rails', require: false
-  gem 'database_cleaner' # For use in cucumber with multi-threaded JS tests
+  gem 'database_cleaner' # For use in features with multi-threaded JS tests
   gem 'capybara'
   gem 'poltergeist'             # Requires PhantomJS installed via brew/etc.
 end

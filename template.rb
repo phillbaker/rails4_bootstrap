@@ -41,7 +41,7 @@ gem_group :controllers do
 end
 
 gem_group :views do
-  gem 'meta-tags', require: 'meta_tags'
+  gem 'meta-tags', :require => 'meta_tags'
   gem 'simple_form'
   gem 'will_paginate'
   gem 'breadcrumbs_on_rails'
@@ -54,7 +54,7 @@ end
 
 gem_group :generators do
   # gem 'rabl' # JSON render-er
-  gem 'sitemap_generator', require: false
+  gem 'sitemap_generator', :require => false
 end
 
 gem_group :monitoring do
@@ -73,7 +73,7 @@ gem_group :assets do
   gem 'coffee-rails'
   gem 'less-rails'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  gem 'therubyracer', platforms: :ruby
+  gem 'therubyracer', :platforms => :ruby
   gem 'uglifier', '>= 1.0.3'
   gem 'sprockets'
   gem 'sprockets-image_compressor'
@@ -122,7 +122,7 @@ end
 gem_group :features do
   gem 'database_cleaner' # For use in features with multi-threaded JS tests
   gem 'capybara'
-  gem 'puffing-billy', require: 'billy' # Stubs for mock browsers
+  gem 'puffing-billy', :require => 'billy' # Stubs for mock browsers
   gem 'poltergeist' # Requires PhantomJS installed via brew/etc.
 end
 
@@ -136,9 +136,9 @@ gem_group :test, :development do
 end
 
 group :console do
-  gem 'pry-rails', require: false
-  gem 'pry-nav', require: false
-  gem 'awesome_print', require: false
+  gem 'pry-rails', :require => false
+  gem 'pry-nav', :require => false
+  gem 'awesome_print', :require => false
 end
 
 #

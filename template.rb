@@ -2,12 +2,12 @@
 ## Gems
 #
 
-group :deployment do
+gem_group :deployment do
   gem 'capistrano'
 end
 
 # Auth (authentication + authorization)
-group :auth do
+gem_group :auth do
   gem 'devise'
   gem 'cancan'
 end
@@ -135,7 +135,7 @@ gem_group :test, :development do
   gem 'jasmine'
 end
 
-group :console do
+gem_group :console do
   gem 'pry-rails', :require => false
   gem 'pry-nav', :require => false
   gem 'awesome_print', :require => false

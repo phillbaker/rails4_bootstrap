@@ -145,10 +145,45 @@ end
 ## Gem setup
 #
 
+# Initialize CanCan
+run "bundle exec rails g cancan:ability"
+run "bundle exec rspec:install"
+
+inject_into_file "spec/spec_helper.rb", after: "RSpec.configure do |config|\n" do
+  " config.include FactoryGirl::Syntax::Methods\n\n"
+end
+
 #
 ## Config changes
 #
 
+remove_file "README.rdoc"
+create_file "README.md", "#{@app_name}"
+
+database_yml = <<-DATABASE_YML
+defaults: &defaults
+username: rails
+password:
+
+development:
+database: #{@app_name}_development
+<<: *defaults
+
+test: &test
+database: #{@app_name}_test
+<<: *defaults
+DATABASE_YML
+
+remove_file 'config/database.yml'
+create_file 'config/database.yml', database_yml
+create_file 'config/database.yml.example', database_yml
+
+append_to_file '.gitignore', '/config/database.yml'
+
 #
-## Revisions setup
+## Revision setup
 #
+
+git :init
+git add: "."
+git commit: %Q{ -m 'Initial commit' }
